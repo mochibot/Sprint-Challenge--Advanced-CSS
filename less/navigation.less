@@ -8,7 +8,8 @@ nav {
   height: 90px;
   text-align: center;
   background: @nav-bg;
-  bottom-border: 1px solid @nav-border;
+  opacity: 0.9;
+  border-bottom: 1px solid @nav-border;
   
   h1 {
     font-size: 4rem;
@@ -20,5 +21,9 @@ nav {
     font-size: 1.6rem;
     .link-style(@nav-font);
     padding: 14px;
+
+    &:hover {
+      .animation(blinking 1s linear 1);
+    }
   }
 }

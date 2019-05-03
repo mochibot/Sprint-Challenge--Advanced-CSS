@@ -92,6 +92,10 @@
           width: 100%;
           padding: 2rem;
         }
+
+        &:hover {
+          .animation(jiggle 1s ease 1);
+        }
       }
     }
 
@@ -110,5 +114,32 @@
         border-radius: 10px;
       }
     }
+  }
+  .signup {
+    border-top: 0.5px solid @border-real; 
+    margin: 0 auto;
+    padding: 20px 50px;
+
+    p {
+      padding:10px 20px;
+    }
+
+    select, input {
+      margin-left: 20px;
+      height: 2.5rem;
+      width: 200px;
+    }
+  }
+
+  button {
+    margin: 20px;
+    .button-color(@btn-bg-color, @porcelain);
+    .button-style(5px, 1.8rem, 200px);  
+
+      @media @phone {
+        width: 100%;
+        padding: 2rem;
+        margin: 20px;
+      }
   }
 }// home
