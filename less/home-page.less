@@ -1,8 +1,12 @@
 // Home Content
 
 .home {
-
+  padding-top: 90px;
   .intro {
+    img {
+      .header-border();
+      width: 100%;
+    }
 
     h2 {
       padding: 15px;
@@ -25,6 +29,18 @@
       border-radius: 20px;
       height: 100%;
     }
+
+    @media @phone {
+      .blast {
+        width: 100%
+      }
+      .sky {
+        .hidden();
+      }
+      .launch {
+        .hidden();
+      }
+    }
   }
 
   .visit-planets {
@@ -46,8 +62,19 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      flex-direction: column-reverse;
+      padding: 15px;
+      margin-top: 15px;
+    }
+
     .walk-text {
       width: 50%;
+
+      @media @phone {
+        width: 100%;
+        margin: 15px 0;
+      }  
 
       h3 {
         margin-bottom: 10px;
@@ -58,6 +85,17 @@
       }
 
       .btn {
+        .button-color(@btn-bg-color, @porcelain);
+        .button-style(@btn-font-size: 1.8rem);  
+
+        @media @phone {
+          width: 100%;
+          padding: 2rem;
+        }
+
+        &:hover {
+          .animation(jiggle 1s ease 1);
+        }
       }
     }
 
@@ -65,11 +103,43 @@
       width: 46%;
       margin-left: 4%;
       
+      @media @phone {
+        margin: 15px 0;
+        width: 100%;
+      }  
+
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
       }
     }
+  }
+  .signup {
+    border-top: 0.5px solid @border-real; 
+    margin: 0 auto;
+    padding: 20px 50px;
+
+    p {
+      padding:10px 20px;
+    }
+
+    select, input {
+      margin-left: 20px;
+      height: 2.5rem;
+      width: 200px;
+    }
+  }
+
+  button {
+    margin: 20px;
+    .button-color(@btn-bg-color, @porcelain);
+    .button-style(5px, 1.8rem, 200px);  
+
+      @media @phone {
+        width: 100%;
+        padding: 2rem;
+        margin: 20px;
+      }
   }
 }// home
